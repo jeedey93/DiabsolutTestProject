@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "DiabsolutTestProject"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-DiabsolutTestProject-8d7ef7d8-d9e7-4a2f-bcf6-8bf1f866b147;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
