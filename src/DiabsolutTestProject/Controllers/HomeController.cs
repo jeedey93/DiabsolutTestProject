@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
+using DiabsolutTestProject.ViewModels;
 
 namespace DiabsolutTestProject.Controllers
 {
@@ -15,14 +16,19 @@ namespace DiabsolutTestProject.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "ASP.NET 5 Rocks!";
 
-            return View();
+            var serverInfo = new ServerInfoViewModel() {
+                Name = Environment.MachineName,
+                Software = Environment.OSVersion.ToString()
+            };
+
+            return View(serverInfo);
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Your contact pagegagagagaga.";
 
             return View();
         }

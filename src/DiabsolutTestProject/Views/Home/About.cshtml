@@ -1,7 +1,33 @@
-﻿@{
+﻿@model DiabsolutTestProject.ViewModels.ServerInfoViewModel
+@{
     ViewData["Title"] = "About";
 }
-<h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
 
-<p>Use this area to provide additional information.</p>
+<body ng-app="personApp">
+    <h2>@ViewData["Title"].</h2>
+    <h3>@ViewData["Message"]</h3>
+    <h2>Server Name: @Model.Name</h2>
+    <h3>Software: @Model.Software</h3>
+    <p>Use this area to provide additional information.</p>
+
+    <button id="listButton" class="btn-success">List Processes</button>
+    <ul id="processList" class="list-group"></ul>
+
+    <div ng-init="personName='John Doe'">
+        <input ng-model="personName" />
+        <br />Person's name is : {{personName}} <br />
+        Simple JavaScript Calculation of 1+2 : {{1+2}}
+    </div>
+
+    <div ng-init="firstName='Joh321321n'; lastName='Doe';">
+        <strong>First name:</strong> {{firstName}} <br />
+        <strong>Last name:</strong> <span ng-bind="lastName" />
+    </div>
+
+    <div ng-controller="personController">
+        <strong>Name:</strong> {{name}} <br />
+        <strong>Missing Property (age):</strong> {{age}}
+    </div>
+</body>
+<script src="~/lib/angular/angular.js"></script>
+<script src="~/js/PersonController.js"></script>
