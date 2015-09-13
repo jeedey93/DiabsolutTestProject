@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using DiabsolutTestProject.ViewModels;
 using System.Diagnostics;
+using DiabsolutTestProject.Models;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -19,6 +20,19 @@ namespace DiabsolutTestProject.Controllers
             var processList = Process.GetProcesses().OrderBy(p => p.ProcessName).ToList();
 
             return processList.Select(p => new ProcessInfoViewModel() { Name = p.ProcessName });
+        }
+
+        [Route("/api/people")]
+        public JsonResult GetPeople()
+        {
+            var people = new List<Person>()
+            {
+                new Person { Id = 1, FirstName = "John", LastName = "Doe" },
+                new Person { Id = 1, FirstName = "Mary", LastName = "Jane" },
+                new Person { Id = 1, FirstName = "Bob", LastName = "Parker" }
+            };
+
+            return Json(people);
         }
     }
 }

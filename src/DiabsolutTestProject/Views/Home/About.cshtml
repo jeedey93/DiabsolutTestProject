@@ -24,10 +24,50 @@
         <strong>Last name:</strong> <span ng-bind="lastName" />
     </div>
 
+
+    <h1>PERSONS</h1>
     <div ng-controller="personController">
-        <strong>Name:</strong> {{name}} <br />
-        <strong>Missing Property (age):</strong> {{age}}
-    </div>
+        <div class="table-responsive">
+            <table class='table table-striped'>
+                <thead>
+                    <tr>
+                        <th class="success">ID</th>
+                        <th class="success">FirstName</th>
+                        <th class="success">LastName</th>
+                    <tr>
+                </thead>
+                <tbody ng-repeat="person in persons">
+                    <tr>
+                        <td>{{person.Id}}</td>
+                        <td>{{person.FirstName}}</td>
+                        <td>{{person.LastName}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+     </div>
+
+
+        <div ng-controller="personController">
+            <strong>Name:</strong> {{name}} <br />
+            <strong>Missing Property (age):</strong> {{age}}
+            <div class="table-responsive">
+                <table class='table table-striped'>
+                    <thead>
+                        <tr>
+                            <th class="success">Processes</th>
+                        <tr>
+                    </thead>
+                    <tbody ng-repeat="product in yo">
+                        <tr>
+                            <td>{{product.Name}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
 </body>
 <script src="~/lib/angular/angular.js"></script>
 <script src="~/js/PersonController.js"></script>
