@@ -45,27 +45,24 @@
                 </tbody>
             </table>
         </div>
-     </div>
 
-
-        <div ng-controller="personController">
-            <strong>Name:</strong> {{name}} <br />
-            <strong>Missing Property (age):</strong> {{age}}
-            <div class="table-responsive">
-                <table class='table table-striped'>
-                    <thead>
-                        <tr>
-                            <th class="success">Processes</th>
-                        <tr>
-                    </thead>
-                    <tbody ng-repeat="product in yo">
-                        <tr>
-                            <td>{{product.Name}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <strong>Name:</strong> {{name}} <br />
+        <strong>Missing Property (age):</strong> {{age}}
+        <div class="table-responsive">
+            <table class='table table-striped'>
+                <thead>
+                    <tr>
+                        <th class="success">Processes</th>
+                    <tr>
+                </thead>
+                <tbody ng-repeat="product in yo">
+                    <tr>
+                        <td>{{product.Name}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+    </div>
 
 
 </body>

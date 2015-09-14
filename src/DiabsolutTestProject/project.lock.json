@@ -872,6 +872,27 @@
           "lib/dnx451/Microsoft.AspNet.Mvc.TagHelpers.dll": {}
         }
       },
+      "Microsoft.AspNet.Mvc.WebApiCompatShim/6.0.0-beta5": {
+        "dependencies": {
+          "Microsoft.AspNet.Mvc.Core": "6.0.0-beta5",
+          "Microsoft.AspNet.WebApi.Client": "5.2.2"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http",
+          "System.Xml",
+          "System.Runtime.Serialization",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/dnx451/Microsoft.AspNet.Mvc.WebApiCompatShim.dll": {}
+        },
+        "runtime": {
+          "lib/dnx451/Microsoft.AspNet.Mvc.WebApiCompatShim.dll": {}
+        }
+      },
       "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces/1.0.0-beta5": {
         "frameworkAssemblies": [
           "mscorlib",
@@ -999,6 +1020,20 @@
         },
         "runtime": {
           "lib/dnx451/Microsoft.AspNet.Tooling.Razor.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebApi.Client/5.2.2": {
+        "dependencies": {
+          "Newtonsoft.Json": "6.0.4"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net45/System.Net.Http.Formatting.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Net.Http.Formatting.dll": {}
         }
       },
       "Microsoft.AspNet.WebUtilities/1.0.0-beta5": {
@@ -2173,6 +2208,19 @@
         "lib/dnxcore50/Microsoft.AspNet.Mvc.TagHelpers.xml"
       ]
     },
+    "Microsoft.AspNet.Mvc.WebApiCompatShim/6.0.0-beta5": {
+      "serviceable": true,
+      "sha512": "8sf1OyyBEScQeq2/CH92/KKcrWt6/T1yqRu5r3UNwEsak81rXIoZlAv+BM7/e+8T1RHTP24koPlxu3g/UcpTag==",
+      "files": [
+        "Microsoft.AspNet.Mvc.WebApiCompatShim.6.0.0-beta5.nupkg",
+        "Microsoft.AspNet.Mvc.WebApiCompatShim.6.0.0-beta5.nupkg.sha512",
+        "Microsoft.AspNet.Mvc.WebApiCompatShim.nuspec",
+        "lib/dnx451/Microsoft.AspNet.Mvc.WebApiCompatShim.dll",
+        "lib/dnx451/Microsoft.AspNet.Mvc.WebApiCompatShim.xml",
+        "lib/dnxcore50/Microsoft.AspNet.Mvc.WebApiCompatShim.dll",
+        "lib/dnxcore50/Microsoft.AspNet.Mvc.WebApiCompatShim.xml"
+      ]
+    },
     "Microsoft.AspNet.PageExecutionInstrumentation.Interfaces/1.0.0-beta5": {
       "serviceable": true,
       "sha512": "En7tg/QbjcSTYrgeli8t9NgJIpxVq+tpTJJ3owj5TI6ASesn3eysqLjqKR7pp0KQNVu/2GeKZjwvERUwFLtPww==",
@@ -2274,6 +2322,19 @@
         "lib/dnx451/Microsoft.AspNet.Tooling.Razor.xml",
         "lib/dnxcore50/Microsoft.AspNet.Tooling.Razor.dll",
         "lib/dnxcore50/Microsoft.AspNet.Tooling.Razor.xml"
+      ]
+    },
+    "Microsoft.AspNet.WebApi.Client/5.2.2": {
+      "serviceable": true,
+      "sha512": "YVq+s0WeXrPxJk57CoElbtMYf95j76uJcW6nue3Cs4eIer9sgUp4rasSo0gALX3ls1Zf2jMceOLik9X/sJyrwA==",
+      "files": [
+        "Microsoft.AspNet.WebApi.Client.5.2.2.nupkg",
+        "Microsoft.AspNet.WebApi.Client.5.2.2.nupkg.sha512",
+        "Microsoft.AspNet.WebApi.Client.nuspec",
+        "lib/net45/System.Net.Http.Formatting.dll",
+        "lib/net45/System.Net.Http.Formatting.xml",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll",
+        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.xml"
       ]
     },
     "Microsoft.AspNet.WebUtilities/1.0.0-beta5": {
@@ -2811,7 +2872,8 @@
       "Microsoft.Framework.Configuration.UserSecrets >= 1.0.0-beta5",
       "Microsoft.Framework.Logging >= 1.0.0-beta5",
       "Microsoft.Framework.Logging.Console >= 1.0.0-beta5",
-      "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-beta5"
+      "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-beta5",
+      "Microsoft.AspNet.Mvc.WebApiCompatShim >= 6.0.0-beta5"
     ],
     "DNX,Version=v4.5.1": []
   }

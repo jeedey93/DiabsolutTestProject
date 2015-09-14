@@ -19,8 +19,24 @@ namespace DiabsolutTestProject.Controllers
         {
             var processList = Process.GetProcesses().OrderBy(p => p.ProcessName).ToList();
 
-            return processList.Select(p => new ProcessInfoViewModel() { Name = p.ProcessName });
+            return processList.Select(p => new ProcessInfoViewModel() { Name = p.ProcessName});
         }
+
+        // GET api/values/7
+        [HttpGet("{id}")]
+        public ProcessInfoViewModel Get(int id)
+        {
+            var processList = Process.GetProcesses().OrderBy(p => p.ProcessName).ToList();
+            return processList.Select(p => new ProcessInfoViewModel() { Name = p.ProcessName }).First();
+        }
+
+        [HttpGet]
+        public List<string> Get2()
+        {
+            var a  = new List<string>() { "HELOO", "ABYEBYE"};
+            return a;
+        }
+
 
         [Route("/api/people")]
         public JsonResult GetPeople()
